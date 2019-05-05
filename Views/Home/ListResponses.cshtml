@@ -1,0 +1,21 @@
+﻿@model IEnumerable<CarsWebMvc.Models.GuestResponse>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ListResponses</title>
+</head>
+<body>
+    @foreach (var item in Model)
+    {
+        <div>
+            @item.Name
+        </div>
+    }
+</body>
+</html>

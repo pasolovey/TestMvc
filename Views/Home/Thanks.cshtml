@@ -1,0 +1,31 @@
+﻿@model CarsWebMvc.Models.GuestResponse
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Thanks</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    
+</head>
+<body>
+    <div class="text-center">
+        <h1> Thank you, @Model.Name !</h1>
+        @if (Model.WillAttend == true)
+        {
+            @:Its great that you will come
+        }
+        else
+        {
+            @:Sorry that you cannt come
+        }
+    </div>
+    <p>
+        Click <a class="nav-link" asp-action="ListResponses">hear</a> to see full list
+    </p>
+</body>
+</html>
